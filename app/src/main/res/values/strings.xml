@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">拾光撷影</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="prompt_acountnum">请输入您的账号</string>
+    <string name="prompt_password">请输入您的密码</string>
+    <string name="prompt_phonenum">请输入您的手机号</string>
+    <string name="register">立即注册</string>
+    <string name="push_tv1">那年今日</string>
+    <string name="push_tv2">相片集</string>
+    <string name="push_tv3">每日一句</string>
+    <string name="push_tv4">我的笔记</string>
+</resources>
