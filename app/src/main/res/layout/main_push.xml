@@ -1,220 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDEDED">
+    android:background="#F6F6F6">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:background="@color/teal_200">
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/push_viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-        <LinearLayout
-            android:id="@+id/push_dots"
-            android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white">
+        <ImageButton
+            android:id="@+id/to_personal"
+            android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:orientation="horizontal" />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true">
-            <ImageButton
-                android:id="@+id/to_personal"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp"
-                android:background="@mipmap/to_personal"/>
-            <RelativeLayout
-                android:layout_width="260dp"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:padding="10dp">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_et_bg"
-                    android:drawableLeft="@mipmap/serch"
-                    android:paddingLeft="10dp"/>
-            </RelativeLayout>
-            <ImageButton
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="15dp"
-                android:background="@mipmap/scanning"/>
-        </RelativeLayout>
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/to_personal"/>
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="32dp"
+            android:background="@drawable/search_et_bg"
+            android:layout_centerInParent="true"
+            android:drawableRight="@mipmap/search"
+            android:layout_margin="9dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"/>
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/scanning"/>
     </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:orientation="horizontal"
-        android:background="@drawable/bottom_radius_bg">
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <ImageButton
-                android:id="@+id/push_ib1"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_above="@+id/push_tv1"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="2dp"
-                android:background="@mipmap/push_ib1"/>
-            <TextView
-                android:id="@+id/push_tv1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="10dp"
-                android:text="@string/push_tv1"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <ImageButton
-                android:id="@+id/push_ib2"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_above="@+id/push_tv2"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="2dp"
-                android:background="@mipmap/push_ib2"/>
-            <TextView
-                android:id="@+id/push_tv2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="10dp"
-                android:text="@string/push_tv2"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <ImageButton
-                android:id="@+id/push_ib3"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_above="@+id/push_tv3"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="2dp"
-                android:background="@mipmap/push_ib3"/>
-            <TextView
-                android:id="@+id/push_tv3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="10dp"
-                android:text="@string/push_tv3"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <ImageButton
-                android:id="@+id/push_ib4"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_above="@+id/push_tv4"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="2dp"
-                android:background="@mipmap/push_ib4"/>
-            <TextView
-                android:id="@+id/push_tv4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="10dp"
-                android:text="@string/push_tv4"/>
-        </RelativeLayout>
-    </LinearLayout>
-    <ScrollView
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:orientation="vertical"
-                android:background="@drawable/push_news_bg"
-                android:padding="10dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp">
+
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="20dp"
+                android:background="@drawable/top_shadow_bg"
+                app:layout_scrollFlags="scroll|enterAlways">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp">
+                        <com.example.mytest.Common.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circle_gray_bg"/>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@mipmap/notes"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentLeft="true"
-                        android:text="每日新闻"
-                        android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"/>
+                        android:layout_marginTop="5dp"
+                        android:text="拾光"
+                        android:textSize="17sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp">
+                        <com.example.mytest.Common.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circle_gray_bg"/>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@mipmap/notes"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:gravity="center"
-                        android:text="查看更多"
-                        android:drawableRight="@mipmap/into"/>
-                </RelativeLayout>
-                <com.example.mytest.Common.MyListView
-                    android:id="@+id/push_news"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        android:layout_marginTop="5dp"
+                        android:text="撷影"
+                        android:textSize="17sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp">
+                        <com.example.mytest.Common.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circle_gray_bg"/>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@mipmap/notes"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="笔记"
+                        android:textSize="17sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp">
+                        <com.example.mytest.Common.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circle_gray_bg"/>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@mipmap/sign_in"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="日签"
+                        android:textSize="17sp"/>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/push_news_bg"
-                android:padding="10dp">
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:background="@color/white">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp">
+                    android:layout_height="45dp">
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:text="图片看点"
-                        android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"/>
-                    <TextView
+                        android:id="@+id/tv_hottest"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:gravity="center"
-                        android:text="查看更多"
-                        android:drawableRight="@mipmap/into"/>
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:text="最热"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/tv_newest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_hottest"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:text="最新"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/tv_simple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tv_newest"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:text="综合"
+                        android:textSize="17sp" />
                 </RelativeLayout>
-                <com.example.mytest.Common.MyListView
-                    android:id="@+id/push_photos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/push_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>

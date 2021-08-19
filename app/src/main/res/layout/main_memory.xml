@@ -31,7 +31,8 @@
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/memory_drawerlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFF6E8">
         <ListView
             android:id="@+id/memory_listview"
             android:layout_width="match_parent"

@@ -22,4 +22,7 @@
     <color name="Linen">#FAF0E6</color>
     <color name="Snow">#FFFAFA</color>
     <color name="Gainsboro">#DCDCDC</color>
+    <color name="lightgray">#C5C3C3</color>
+    <color name="text_unselected">#A2A2A2</color>
+    <color name="text_selected">#F55C5C</color>
 </resources>

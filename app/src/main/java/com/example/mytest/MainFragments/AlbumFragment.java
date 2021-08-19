@@ -1,27 +1,20 @@
 package com.example.mytest.MainFragments;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
-import com.example.mytest.Common.CommonUtils;
 import com.example.mytest.EventsActivity;
 import com.example.mytest.R;
-import com.example.mytest.ScrollView.ScrollParentView;
+import com.example.mytest.xytest.TestActivity;
 
 public class AlbumFragment extends Fragment implements View.OnClickListener {
     private Button to_events;

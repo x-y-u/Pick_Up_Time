@@ -43,7 +43,7 @@
             android:textSize="18sp"
             android:layout_below="@+id/password"
             android:layout_marginTop="55dp"
-            android:background="@drawable/ripple_btn"/>
+            android:background="@drawable/ripple_red_btn"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

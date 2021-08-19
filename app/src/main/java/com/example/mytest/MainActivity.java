@@ -12,10 +12,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.example.mytest.Common.BaseActivity;
-import com.example.mytest.MainFragments.PushFragment;
+import com.example.mytest.MainFragments.OldPushFragment;
 import com.example.mytest.MainFragments.MemoryFragment;
 import com.example.mytest.MainFragments.AlbumFragment;
 import com.example.mytest.MainFragments.PostFragment;
+import com.example.mytest.MainFragments.PushFragment;
 import com.example.mytest.MainFragments.RelaxFragment;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {

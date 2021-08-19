@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFF4E3">
         <RelativeLayout
-            android:id="@+id/events_top"
+            android:id="@+id/event_top"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp">
@@ -26,6 +28,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="60dp"/>
             <TextView
+                android:id="@+id/event_year1"
                 android:layout_width="130dp"
                 android:layout_height="50dp"
                 android:layout_centerInParent="true"
@@ -36,68 +39,88 @@
                 android:textSize="25sp"/>
         </RelativeLayout>
         <RelativeLayout
-            android:id="@+id/events_content"
+            android:id="@+id/event_content"
             android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:layout_below="@+id/events_top"
+            android:layout_height="580dp"
+            android:layout_below="@+id/event_top"
             android:background="@mipmap/event_bg"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="-10dp"
             android:padding="25dp">
             <TextView
-                android:id="@+id/event_title"
+                android:id="@+id/event_title1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
-                android:text=""/>
+                android:layout_marginTop="30dp"
+                android:text="————真理的味道"
+                android:textSize="18sp" />
             <ImageView
-                android:id="@+id/event_img"
+                android:id="@+id/event_img1"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/event_title1"
                 android:scaleType="centerCrop"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/event_img1"
+                android:layout_marginTop="25dp">
+                <TextView
+                    android:id="@+id/event_year2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="1921"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/event_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/event_year2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="2dp"
+                    android:text="7月1日"
+                    android:textSize="18sp"/>
+                <ImageView
+                    android:id="@+id/event_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/weather"/>
+            </RelativeLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123"/>
         </RelativeLayout>
     </RelativeLayout>
-    <com.example.mytest.ScrollView.ScrollParentView
-        android:id="@+id/scrollparentview"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <RelativeLayout
-            android:id="@+id/transparentTop"
-            android:layout_width="match_parent"
-            android:layout_height="650dp"/>
-        <com.example.mytest.ScrollView.ScrollChildView
+        android:layout_height="wrap_content"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="130dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/orange">
-
+            android:padding="10dp"
+            android:background="#FFF4E3">
             <LinearLayout
-                android:id="@+id/content_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/head_image1"
-                    android:paddingTop="10dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/head_image1"
-                    android:paddingTop="10dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/head_image1"
-                    android:paddingTop="10dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/head_image1"
-                    android:paddingTop="10dp"/>
-
+                android:orientation="vertical">
+                <include layout="@layout/event_top"/>
+                <include layout="@layout/event_center"/>
+                <include layout="@layout/event_bottom"/>
             </LinearLayout>
-        </com.example.mytest.ScrollView.ScrollChildView>
-    </com.example.mytest.ScrollView.ScrollParentView>
-</FrameLayout>
+        </ScrollView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
