@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,7 +20,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.mytest.ImageActivity;
+import com.example.mytest.LabelPushActivity;
 import com.example.mytest.MyAdapter.PushRecyclerViewAdapter;
+import com.example.mytest.NoteActivity;
 import com.example.mytest.PersonalActivity;
 import com.example.mytest.R;
 
@@ -36,6 +39,7 @@ public class PushFragment extends Fragment implements View.OnClickListener{
     private PushRecyclerViewAdapter adapter;
     //private TextView tv_simple,tv_newest,tv_hottest;
     private TextView[] titles = new TextView[3];
+    private RelativeLayout[] img_to = new RelativeLayout[4];
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.main_push,container,false);
@@ -65,6 +69,9 @@ public class PushFragment extends Fragment implements View.OnClickListener{
         for(int i = 0;i<titles.length;i++){
             titles[i].setOnClickListener(this);
         }
+        for (int i = 0;i<img_to.length;i++){
+            img_to[i].setOnClickListener(this);
+        }
     }
 
     private void InitViews() {
@@ -73,10 +80,15 @@ public class PushFragment extends Fragment implements View.OnClickListener{
         titles[2] = view.findViewById(R.id.tv_hottest);
         titles[0] = view.findViewById(R.id.tv_simple);
         titles[1] = view.findViewById(R.id.tv_newest);
+        img_to[0] = view.findViewById(R.id.img_to_time_label);
+        img_to[1] = view.findViewById(R.id.img_to_address_label);
+        img_to[2] = view.findViewById(R.id.img_to_note);
+        img_to[3] = view.findViewById(R.id.img_to_sign_in);
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()){
             case R.id.to_personal:
                 startActivity(new Intent(getActivity(), PersonalActivity.class));
@@ -89,6 +101,20 @@ public class PushFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.tv_hottest:
                 select(2);
+                break;
+            case R.id.img_to_time_label:
+                intent = new Intent(getActivity(), LabelPushActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.img_to_address_label:
+                intent = new Intent(getActivity(), LabelPushActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.img_to_note:
+                intent = new Intent(getActivity(), NoteActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.img_to_sign_in:
                 break;
         }
     }

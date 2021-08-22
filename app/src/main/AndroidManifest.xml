@@ -19,7 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LabelPushActivity"></activity>
+        <activity android:name=".NoteEditingActivity"></activity>
+        <activity android:name=".NoteActivity" />
+        <activity android:name=".LabelPushActivity" />
         <activity android:name=".ImageActivity" />
         <activity android:name=".EventsActivity" />
         <activity android:name=".ScoreMallActivity" />

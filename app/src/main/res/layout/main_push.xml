@@ -57,6 +57,7 @@
                     android:orientation="vertical"
                     android:gravity="center_horizontal">
                     <RelativeLayout
+                        android:id="@+id/img_to_time_label"
                         android:layout_width="70dp"
                         android:layout_height="70dp">
                         <com.example.mytest.Common.CircleImageView
@@ -66,7 +67,7 @@
                         <ImageView
                             android:layout_width="22dp"
                             android:layout_height="22dp"
-                            android:src="@mipmap/notes"
+                            android:src="@mipmap/push_time"
                             android:layout_centerInParent="true"/>
                     </RelativeLayout>
                     <TextView
@@ -83,6 +84,7 @@
                     android:orientation="vertical"
                     android:gravity="center_horizontal">
                     <RelativeLayout
+                        android:id="@+id/img_to_address_label"
                         android:layout_width="70dp"
                         android:layout_height="70dp">
                         <com.example.mytest.Common.CircleImageView
@@ -92,7 +94,7 @@
                         <ImageView
                             android:layout_width="22dp"
                             android:layout_height="22dp"
-                            android:src="@mipmap/notes"
+                            android:src="@mipmap/push_address"
                             android:layout_centerInParent="true"/>
                     </RelativeLayout>
                     <TextView
@@ -109,6 +111,7 @@
                     android:orientation="vertical"
                     android:gravity="center_horizontal">
                     <RelativeLayout
+                        android:id="@+id/img_to_note"
                         android:layout_width="70dp"
                         android:layout_height="70dp">
                         <com.example.mytest.Common.CircleImageView
@@ -118,7 +121,7 @@
                         <ImageView
                             android:layout_width="22dp"
                             android:layout_height="22dp"
-                            android:src="@mipmap/notes"
+                            android:src="@mipmap/push_notes"
                             android:layout_centerInParent="true"/>
                     </RelativeLayout>
                     <TextView
@@ -135,6 +138,7 @@
                     android:orientation="vertical"
                     android:gravity="center_horizontal">
                     <RelativeLayout
+                        android:id="@+id/img_to_sign_in"
                         android:layout_width="70dp"
                         android:layout_height="70dp">
                         <com.example.mytest.Common.CircleImageView
@@ -144,7 +148,7 @@
                         <ImageView
                             android:layout_width="22dp"
                             android:layout_height="22dp"
-                            android:src="@mipmap/sign_in"
+                            android:src="@mipmap/push_sign_in"
                             android:layout_centerInParent="true"/>
                     </RelativeLayout>
                     <TextView

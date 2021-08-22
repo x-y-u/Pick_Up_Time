@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp">
+    <RelativeLayout
+        android:id="@+id/a_note"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/note_title"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:text="真理"
+            android:textSize="20sp"
+            android:textColor="#515151"/>
+        <TextView
+            android:id="@+id/note_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/note_title"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:maxLines="5"
+            android:ellipsize="end"
+            android:text="1959年，南湖革命纪念馆根据中共“一大”会议时来嘉兴安排游船的直接当事人王会悟回忆，仿制了一艘丝网船模型，送到北京请中共“一大”代表董必武审定认可。"/>
+        <TextView
+            android:id="@+id/note_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textSize="15sp"
+            android:textColor="#515151"
+            android:text="8/10"/>
+        <ImageView
+            android:id="@+id/is_selected"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@mipmap/note_selected"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

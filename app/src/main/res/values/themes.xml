@@ -13,4 +13,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Dialog">
+        <!-- 这两个属性对于一个常规的Dialog，一般必须设置的-->
+        <!-- 这两个属性按照下面的值设置之后，确保了弹窗的实际显示效果，跟你在layout文件中的定义效果是一样的 -->
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
 </resources>

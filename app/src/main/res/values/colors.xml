@@ -25,4 +25,6 @@
     <color name="lightgray">#C5C3C3</color>
     <color name="text_unselected">#A2A2A2</color>
     <color name="text_selected">#F55C5C</color>
+    <color name="label_unselected">#434343</color>
+    <color name="label_selected">#220101</color>
 </resources>

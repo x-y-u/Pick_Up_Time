@@ -48,15 +48,23 @@
             android:textColor="@color/black"
             android:textSize="20sp"/>
         <TextView
+            android:id="@+id/tv_to_personal_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/img_to_personal_info"
+            android:layout_marginRight="3dp"
             android:layout_centerVertical="true"
             android:text="个人信息"
             android:textSize="15sp"
             android:textColor="#707070"
-            android:drawableRight="@mipmap/into"
             android:gravity="center_vertical"/>
+        <ImageView
+            android:id="@+id/img_to_personal_info"
+            android:layout_width="8dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/into"/>
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/personal_score"
@@ -79,13 +87,21 @@
             android:id="@+id/tv_scores"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/img_to_score_store"
+            android:layout_marginRight="7dp"
             android:layout_centerVertical="true"
             android:gravity="center_vertical"
             android:text="425"
             android:textSize="18sp"
-            android:textColor="@color/indianred"
-            android:drawableRight="@mipmap/into"/>
+            android:textColor="@color/indianred" />
+        <ImageView
+            android:id="@+id/img_to_score_store"
+            android:layout_width="9dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/into"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
