@@ -2,13 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg">
     <RelativeLayout
         android:layout_centerHorizontal="true"
         android:layout_width="310dp"
         android:layout_height="match_parent">
         <EditText
-            android:id="@+id/phonenum"
+            android:id="@+id/register_phonenum"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:hint="@string/prompt_phonenum"
@@ -21,28 +22,28 @@
             android:drawableLeft="@mipmap/phonenum"
             android:drawablePadding="3dp"/>
         <EditText
-            android:id="@+id/acountnum"
+            android:id="@+id/register_username"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:hint="@string/prompt_acountnum"
+            android:hint="@string/prompt_username"
             android:textSize="15sp"
-            android:inputType="number"
+            android:inputType="text"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/phonenum"
+            android:layout_below="@+id/register_phonenum"
             android:layout_marginTop="20dp"
             android:paddingLeft="15dp"
             android:background="@drawable/round_shadow_et_bg"
             android:drawableLeft="@mipmap/acountnum"
             android:drawablePadding="3dp"/>
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/register_password"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:hint="@string/prompt_password"
             android:textSize="15sp"
             android:inputType="textPassword"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/acountnum"
+            android:layout_below="@+id/register_username"
             android:layout_marginTop="20dp"
             android:paddingLeft="15dp"
             android:background="@drawable/round_shadow_et_bg"
@@ -50,13 +51,13 @@
             android:drawablePadding="5.5dp" />
 
         <Button
-            android:id="@+id/login"
+            android:id="@+id/register_confirm"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:text="立即注册"
             android:textSize="18sp"
-            android:layout_below="@+id/password"
+            android:layout_below="@+id/register_password"
             android:layout_marginTop="55dp"
             android:background="@drawable/ripple_red_btn"/>
 

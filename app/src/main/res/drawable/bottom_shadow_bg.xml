@@ -3,11 +3,9 @@
     <item >
         <shape android:shape="rectangle">
             <gradient
-
                 android:startColor="#696969"
-                android:endColor = "#33A9A9A9"
+                android:endColor = "#00A9A9A9"
                 android:angle = "-90"/>
-
         </shape>
     </item>
     <!--最上面的View，距离底部2dp的高度，这样底层的View就会露出，这样就有阴影效果了-->

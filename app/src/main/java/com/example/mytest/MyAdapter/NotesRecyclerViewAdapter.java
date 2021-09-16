@@ -47,9 +47,9 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter {
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        private ImageView is_selected;
-        private TextView title,content,time;
-        private RelativeLayout a_note;
+        public ImageView is_selected;
+        public TextView title,content,time;
+        public RelativeLayout a_note;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             this.title = itemView.findViewById(R.id.note_title);

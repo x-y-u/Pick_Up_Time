@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.example.mytest.Common.CircleImageView
+        android:id="@+id/event_peoples_item_iv"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/head_image2"/>
+    <TextView
+        android:id="@+id/event_peoples_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="毛泽东"
+        android:textSize="18sp"/>
+</LinearLayout>

@@ -24,7 +24,9 @@
     <color name="Gainsboro">#DCDCDC</color>
     <color name="lightgray">#C5C3C3</color>
     <color name="text_unselected">#A2A2A2</color>
-    <color name="text_selected">#F55C5C</color>
+    <color name="text_selected">#212121</color>
+    <color name="text_selected_red">#CF1818</color>
     <color name="label_unselected">#434343</color>
     <color name="label_selected">#220101</color>
+    <color name="text_gray">#585858</color>
 </resources>

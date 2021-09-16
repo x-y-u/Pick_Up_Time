@@ -6,32 +6,20 @@ public class PostBean {
     /*
     * 发帖类
     * */
-    String userid;//发帖人id
-    String postid;//帖子id，方便存储评论
+    int postid;//帖子id，方便存储评论
     String username;//发帖人昵称
-    int head_image;
-    int year;
-    int month;
-    int day;
-    int hour;
-    int minute;
+    String head_image;
+    String time;
     String words;//文字内容
-    List<Integer> images;
+    String first_img;
     int agrees;//点赞数
+    int comments;
 
-    public String getUserid() {
-        return userid;
-    }
-
-    public void setUserid(String userid) {
-        this.userid = userid;
-    }
-
-    public String getPostid() {
+    public int getPostid() {
         return postid;
     }
 
-    public void setPostid(String postid) {
+    public void setPostid(int postid) {
         this.postid = postid;
     }
 
@@ -43,52 +31,12 @@ public class PostBean {
         this.username = username;
     }
 
-    public int getHead_image() {
+    public String getHead_image() {
         return head_image;
     }
 
-    public void setHead_image(int head_image) {
+    public void setHead_image(String head_image) {
         this.head_image = head_image;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public int getMonth() {
-        return month;
-    }
-
-    public void setMonth(int month) {
-        this.month = month;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public void setDay(int day) {
-        this.day = day;
-    }
-
-    public int getHour() {
-        return hour;
-    }
-
-    public void setHour(int hour) {
-        this.hour = hour;
-    }
-
-    public int getMinute() {
-        return minute;
-    }
-
-    public void setMinute(int minute) {
-        this.minute = minute;
     }
 
     public String getWords() {
@@ -99,14 +47,6 @@ public class PostBean {
         this.words = words;
     }
 
-    public List<Integer> getImages() {
-        return images;
-    }
-
-    public void setImages(List<Integer> images) {
-        this.images = images;
-    }
-
     public int getAgrees() {
         return agrees;
     }
@@ -115,12 +55,38 @@ public class PostBean {
         this.agrees = agrees;
     }
 
-    public PostBean(String username, int head_image, int hour, int minute, String words, List<Integer> images) {
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getFirst_img() {
+        return first_img;
+    }
+
+    public void setFirst_img(String first_img) {
+        this.first_img = first_img;
+    }
+
+    public int getComments() {
+        return comments;
+    }
+
+    public void setComments(int comments) {
+        this.comments = comments;
+    }
+
+    public PostBean(int postid, String username, String head_image, String time, String words, String first_img, int agrees, int comments) {
+        this.postid = postid;
         this.username = username;
         this.head_image = head_image;
-        this.hour = hour;
-        this.minute = minute;
+        this.time = time;
         this.words = words;
-        this.images = images;
+        this.first_img = first_img;
+        this.agrees = agrees;
+        this.comments = comments;
     }
 }

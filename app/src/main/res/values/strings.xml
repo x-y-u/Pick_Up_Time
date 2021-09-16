@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">拾光撷影</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="prompt_acountnum">请输入您的账号</string>
+    <string name="prompt_username">请输入您的用户名</string>
     <string name="prompt_password">请输入您的密码</string>
     <string name="prompt_phonenum">请输入您的手机号</string>
     <string name="register">立即注册</string>

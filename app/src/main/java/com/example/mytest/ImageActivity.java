@@ -45,7 +45,7 @@ public class ImageActivity extends AppCompatActivity implements EasyPermissions.
     private static final int REQUEST_CODE_SAVE_IMG = 10;
     private ImageButton imageButton;
     private ImageView imageView;
-    private String imageurl;
+    private int imageurl;
     private Bitmap bitmap;
     private Button image_save;
 
@@ -76,7 +76,8 @@ public class ImageActivity extends AppCompatActivity implements EasyPermissions.
 
     private void InitDatas() {
         Intent intent = getIntent();
-        imageurl = intent.getStringExtra("imageurl");
+        //imageurl = intent.getStringExtra("imageurl");
+        imageurl = intent.getIntExtra("imageurl",R.drawable.on_loading);
         Glide.with(this).load(imageurl).into(new ImageViewTarget<Drawable>(imageView){
             //图片加载完成
             @Override

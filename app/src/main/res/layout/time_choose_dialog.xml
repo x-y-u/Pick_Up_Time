@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <DatePicker
+        android:id="@+id/date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        android:background="@color/white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:background="@color/white"
+        android:paddingBottom="5dp">
+        <TextView
+            android:id="@+id/date_picker_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:background="@drawable/ripple_bt_bg"
+            android:text="取消"
+            android:textSize="15sp"
+            android:textColor="@color/indianred"/>
+        <TextView
+            android:id="@+id/date_picker_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:background="@drawable/ripple_bt_bg"
+            android:text="确定"
+            android:textSize="15sp"
+            android:textColor="@color/indianred"/>
+    </LinearLayout>
+</LinearLayout>

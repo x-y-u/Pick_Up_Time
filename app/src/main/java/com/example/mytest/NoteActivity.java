@@ -1,9 +1,11 @@
 package com.example.mytest;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.content.BroadcastReceiver;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -12,7 +14,7 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.mytest.Common.NoteBottomDialog;
+import com.example.mytest.Common.BaseStatusBarActivity;
 import com.example.mytest.MyAdapter.NotesRecyclerViewAdapter;
 import com.example.mytest.db.NoteBean;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,7 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NoteActivity extends AppCompatActivity {
+public class NoteActivity extends BaseStatusBarActivity {
     private List<NoteBean> noteBeans;
     private RecyclerView notes_rv;
     private NotesRecyclerViewAdapter adapter;
@@ -43,8 +45,7 @@ public class NoteActivity extends AppCompatActivity {
         note_add_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                NoteBottomDialog bottomDialog = NoteBottomDialog.newInstance();
-//                bottomDialog.show(getSupportFragmentManager(),"bottom");
+                startActivity(new Intent(NoteActivity.this,Make_NoteActivity.class));
             }
         });
         adapter.setOnClickListener(new NotesRecyclerViewAdapter.OnClickListener() {
@@ -123,4 +124,16 @@ public class NoteActivity extends AppCompatActivity {
         note_bottom = findViewById(R.id.note_bottom);
         is_all_selected = findViewById(R.id.is_all_selected);
     }
+
+//    @Override
+//    public Intent registerReceiver(BroadcastReceiver receiver, IntentFilter filter) {
+//        return getApplicationContext().registerReceiver(receiver,filter);
+//        //return super.registerReceiver(receiver, filter);
+//    }
+//
+//    @Override
+//    public void unregisterReceiver(BroadcastReceiver receiver) {
+//        getApplicationContext().unregisterReceiver(receiver);
+//        //super.unregisterReceiver(receiver);
+//    }
 }

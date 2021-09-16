@@ -2,16 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg">
     <RelativeLayout
         android:layout_centerHorizontal="true"
         android:layout_width="310dp"
         android:layout_height="match_parent">
         <EditText
-            android:id="@+id/acountnum"
+            android:id="@+id/login_username"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:hint="@string/prompt_acountnum"
+            android:hint="@string/prompt_username"
             android:textSize="15sp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="180dp"
@@ -21,14 +22,14 @@
             android:drawableLeft="@mipmap/acountnum"
             android:drawablePadding="3dp"/>
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/login_password"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:hint="@string/prompt_password"
             android:textSize="15sp"
             android:inputType="textPassword"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/acountnum"
+            android:layout_below="@+id/login_username"
             android:layout_marginTop="20dp"
             android:paddingLeft="15dp"
             android:background="@drawable/round_shadow_et_bg"
@@ -41,7 +42,7 @@
             android:layout_centerHorizontal="true"
             android:text="立即登录"
             android:textSize="18sp"
-            android:layout_below="@+id/password"
+            android:layout_below="@+id/login_password"
             android:layout_marginTop="55dp"
             android:background="@drawable/ripple_red_btn"/>
         <TextView

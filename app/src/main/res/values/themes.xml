@@ -18,5 +18,6 @@
         <!-- 这两个属性按照下面的值设置之后，确保了弹窗的实际显示效果，跟你在layout文件中的定义效果是一样的 -->
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowBackground">@android:color/transparent</item>
+<!--        <item name="android:windowContentOverlay">@color/white</item>-->
     </style>
 </resources>

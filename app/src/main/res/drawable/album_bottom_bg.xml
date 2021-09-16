@@ -3,21 +3,21 @@
 
     <item>
         <shape>
-            <solid android:color="#FFF1D6" />
+            <solid android:color="#FFE4C4" />
         </shape>
     </item>
 
     <item
-        android:end="-20dp"
+        android:end="-40dp"
         android:gravity="bottom"
-        android:start="-20dp"
-        android:bottom="-50dp">
+        android:start="-40dp"
+        android:bottom="-60dp">
         <shape
             android:shape="oval"
             android:useLevel="true">
-            <size android:height="120dp" />
+            <size android:height="140dp" />
             <stroke
-                android:color="@color/white"
+                android:color="#12C4B2"
                 android:width="9dp"/>
         </shape>
     </item>

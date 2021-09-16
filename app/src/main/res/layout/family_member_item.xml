@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.example.mytest.Common.CircleImageView
+        android:id="@+id/member_head_image"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/head_image1"/>
+    <TextView
+        android:id="@+id/member_relationship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/member_head_image"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:text="妈妈"
+        android:textSize="17sp"/>
+</RelativeLayout>

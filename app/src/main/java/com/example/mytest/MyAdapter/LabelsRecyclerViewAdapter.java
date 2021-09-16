@@ -17,6 +17,11 @@ public class LabelsRecyclerViewAdapter extends RecyclerView.Adapter {
     private List<String> labels;
     private Context mcontext;
     private int selectedpos;
+    private OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener){
+        this.onItemClickListener = onItemClickListener;
+    }
     public LabelsRecyclerViewAdapter(Context mcontext,List<String> labels){
         this.mcontext = mcontext;
         this.labels = labels;
@@ -49,8 +54,13 @@ public class LabelsRecyclerViewAdapter extends RecyclerView.Adapter {
         ((MyViewHolder)holder).textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectedpos = position;
-                notifyDataSetChanged();
+                if (position!=selectedpos){
+                    if (onItemClickListener!=null){
+                        onItemClickListener.OnClick(labels.get(position));
+                    }
+                    selectedpos = position;
+                    notifyDataSetChanged();
+                }
             }
         });
     }
@@ -58,5 +68,9 @@ public class LabelsRecyclerViewAdapter extends RecyclerView.Adapter {
     @Override
     public int getItemCount() {
         return labels.size();
+    }
+
+    public interface OnItemClickListener{
+        public void OnClick(String label_text);
     }
 }

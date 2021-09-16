@@ -1,16 +1,17 @@
 package com.example.mytest.db;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class MemoryBean {
+public class MemoryBean implements Serializable {
     String userid;
     int year;
     int month;
     int day;
-    int hour;
-    int minute;
+    String title;
     String words;//文字内容
-    List<Integer> images;
+    //List<Integer> images;
+    String imageurl;
     String weekday;//周几
 
     public String getUserid() {
@@ -45,22 +46,6 @@ public class MemoryBean {
         this.day = day;
     }
 
-    public int getHour() {
-        return hour;
-    }
-
-    public void setHour(int hour) {
-        this.hour = hour;
-    }
-
-    public int getMinute() {
-        return minute;
-    }
-
-    public void setMinute(int minute) {
-        this.minute = minute;
-    }
-
     public String getWords() {
         return words;
     }
@@ -69,12 +54,20 @@ public class MemoryBean {
         this.words = words;
     }
 
-    public List<Integer> getImages() {
-        return images;
+//    public List<Integer> getImages() {
+//        return images;
+//    }
+//
+//    public void setImages(List<Integer> images) {
+//        this.images = images;
+//    }
+
+    public String getImageurl() {
+        return imageurl;
     }
 
-    public void setImages(List<Integer> images) {
-        this.images = images;
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
     }
 
     public String getWeekday() {
@@ -85,15 +78,23 @@ public class MemoryBean {
         this.weekday = weekday;
     }
 
-    public MemoryBean(String userid, int year, int month, int day, int hour, int minute, String words, List<Integer> images, String weekday) {
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public MemoryBean(String userid, int year, int month, int day, String title,String words, String imageurl, String weekday) {
         this.userid = userid;
         this.year = year;
         this.month = month;
         this.day = day;
-        this.hour = hour;
-        this.minute = minute;
         this.words = words;
-        this.images = images;
+        this.title = title;
+        //this.images = images;
+        this.imageurl = imageurl;
         this.weekday = weekday;
     }
 }

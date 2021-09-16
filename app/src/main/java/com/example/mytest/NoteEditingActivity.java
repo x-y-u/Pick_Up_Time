@@ -1,15 +1,13 @@
 package com.example.mytest;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.example.mytest.Common.NoteBottomDialog;
+import com.example.mytest.Common.BaseStatusBarActivity;
+import com.example.mytest.Dialogs.NoteBottomDialog;
 
-public class NoteEditingActivity extends AppCompatActivity {
+public class NoteEditingActivity extends BaseStatusBarActivity {
     private ImageView img_back,img_more;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,6 +14,13 @@
             android:layout_height="50dp"
             android:layout_marginTop="5dp">
             <ImageButton
+                android:id="@+id/event_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/back"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"/>
+            <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="10dp"
@@ -39,7 +46,6 @@
                 android:textSize="25sp"/>
         </RelativeLayout>
         <RelativeLayout
-            android:id="@+id/event_content"
             android:layout_width="match_parent"
             android:layout_height="580dp"
             android:layout_below="@+id/event_top"
@@ -53,17 +59,18 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="25dp"
                 android:text="————真理的味道"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
             <ImageView
                 android:id="@+id/event_img1"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_below="@+id/event_title1"
                 android:scaleType="centerCrop"/>
             <RelativeLayout
+                android:id="@+id/event_environment"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@+id/event_img1"
@@ -78,7 +85,7 @@
                     android:textSize="25sp"
                     android:textColor="@color/black"/>
                 <TextView
-                    android:id="@+id/event_day"
+                    android:id="@+id/event_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/event_year2"
@@ -96,10 +103,13 @@
                     android:layout_marginRight="10dp"
                     android:src="@mipmap/weather"/>
             </RelativeLayout>
-            <Button
+            <TextView
+                android:id="@+id/event_passage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="123"/>
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/event_environment"/>
         </RelativeLayout>
     </RelativeLayout>
     <androidx.core.widget.NestedScrollView

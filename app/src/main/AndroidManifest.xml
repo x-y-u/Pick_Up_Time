@@ -9,7 +9,16 @@
     <uses-permission
         android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +28,38 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".NoteEditingActivity"></activity>
+        <activity android:name=".PushSearchResultActivity"></activity>
+        <activity android:name=".GameFourActivity" />
+        <activity android:name=".MemoryClassifyActivity" />
+        <activity android:name=".PushSearchActivity" />
+        <activity android:name=".GameThreeActivity" />
+        <activity android:name=".MemorysHtmlActivity" />
+        <activity android:name=".AlbumChooseActivity" />
+        <activity android:name=".MainActivities.AlbumActivity" />
+        <activity android:name=".MainActivities.RelaxActivity" />
+        <activity android:name=".MainActivities.PushActivity" />
+        <activity android:name=".MainActivities.PostActivity" />
+        <activity android:name=".MainActivities.MemoryActivity" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="4b70443880135d8dd89f09f8e47d61bb" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".ExhibitionActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".PersonalSpaceActivity" />
+        <activity android:name=".FamilyActivity" />
+        <activity android:name=".Make_NoteActivity" />
+        <activity android:name=".ChooseImageActivity" />
+        <activity android:name=".MemoryUploadActivity" />
+        <activity android:name=".NoteEditingActivity" />
         <activity android:name=".NoteActivity" />
         <activity android:name=".LabelPushActivity" />
         <activity android:name=".ImageActivity" />
