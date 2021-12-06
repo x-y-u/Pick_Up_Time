@@ -162,7 +162,7 @@ public class MemoryUploadActivity extends BaseStatusBarActivity {
         Intent intent = getIntent();
         title = et_title.getText().toString();
         content = et_content.getText().toString();
-        String date = String.format("%d-%d-%d", year, month, day);
+        //String date = String.format("%d-%d-%d", year, month, day);
         List<String> images = adapter.getImages();
         intent.putExtra("title",title);
         intent.putExtra("content",content);
@@ -173,12 +173,12 @@ public class MemoryUploadActivity extends BaseStatusBarActivity {
         b.putStringArrayList("images",(ArrayList<String>)images);
         intent.putExtras(b);
         setResult(2,intent);
-        String url = "";
-        try {
-            HttpUtils.post(url,date,title,content,images);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        String url = "";
+//        try {
+//            HttpUtils.post(url,date,title,content,images);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         finish();
     }
 }

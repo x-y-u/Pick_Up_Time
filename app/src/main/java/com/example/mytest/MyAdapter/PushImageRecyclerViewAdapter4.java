@@ -67,8 +67,7 @@ public class PushImageRecyclerViewAdapter4 extends RecyclerView.Adapter {
                 if (listener!=null){
                     listener.OnLongClick();
                     is_selected.set(position,1);
-                    notifyDataSetChanged();
-                    //((MyViewHolder)holder).iv_is_selected.setImageResource(R.mipmap.image_selected);
+                    ((MyViewHolder)holder).iv_is_selected.setImageResource(R.mipmap.image_selected);
                     return true;
                 }
                 return false;
@@ -123,6 +122,7 @@ public class PushImageRecyclerViewAdapter4 extends RecyclerView.Adapter {
             reset();
         }
         this.state = state;
+        notifyDataSetChanged();
     }
 
     public void reset(){

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ public class PersonalActivity extends BaseStatusBarActivity {
     private ImageButton btn_back;
     private ImageView personal_notes,personal_sign_in;
     private RelativeLayout to_personal_score_mall;
+    private LinearLayout to_info;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,13 @@ public class PersonalActivity extends BaseStatusBarActivity {
             public void onClick(View v) {
                 SignInDialog dialog = SignInDialog.newInstance();
                 dialog.show(getSupportFragmentManager(),"sign_in");
+            }
+        });
+        to_info = findViewById(R.id.personal_to_info);
+        to_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PersonalActivity.this,PersonalInfoActivity.class));
             }
         });
     }

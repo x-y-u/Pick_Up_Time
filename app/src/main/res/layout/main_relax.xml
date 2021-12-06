@@ -38,7 +38,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="22.5dp"
                 android:paddingLeft="150dp"
                 android:paddingRight="30dp"
@@ -61,17 +61,12 @@
                     android:text="华容道游戏，从画里读出画中话。"
                     android:textSize="16sp"/>
             </LinearLayout>
-            <androidx.cardview.widget.CardView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="15dp"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/head_image1"/>
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/relax_game1"/>
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_game1"
                 android:layout_width="135dp"
@@ -125,7 +120,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="22.5dp"
                 android:paddingLeft="150dp"
                 android:paddingRight="30dp"
@@ -148,17 +143,12 @@
                     android:text="绘画游戏，带你领略党的风姿。"
                     android:textSize="16sp"/>
             </LinearLayout>
-            <androidx.cardview.widget.CardView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="15dp"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/head_image2"/>
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/relax_game2"/>
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_game2"
                 android:layout_width="135dp"
@@ -212,7 +202,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="22.5dp"
                 android:paddingLeft="150dp"
                 android:paddingRight="30dp"
@@ -235,17 +225,12 @@
                     android:text="看图猜题，猜猜照片中的故事。"
                     android:textSize="16sp"/>
             </LinearLayout>
-            <androidx.cardview.widget.CardView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="15dp"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/head_image3"/>
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/relax_game3"/>
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_game3"
                 android:layout_width="135dp"
@@ -299,7 +284,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="22.5dp"
                 android:paddingLeft="150dp"
                 android:paddingRight="30dp"
@@ -322,17 +307,12 @@
                     android:text="老照片上色，旧照也可以焕然一新。"
                     android:textSize="16sp"/>
             </LinearLayout>
-            <androidx.cardview.widget.CardView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="15dp"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/head_image4"/>
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/relax_game4"/>
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_game4"
                 android:layout_width="135dp"

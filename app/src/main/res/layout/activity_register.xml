@@ -10,6 +10,7 @@
         android:layout_height="match_parent">
         <EditText
             android:id="@+id/register_phonenum"
+            android:textCursorDrawable="@drawable/cursor_color"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:hint="@string/prompt_phonenum"
@@ -25,6 +26,7 @@
             android:id="@+id/register_username"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:textCursorDrawable="@drawable/cursor_color"
             android:hint="@string/prompt_username"
             android:textSize="15sp"
             android:inputType="text"
@@ -40,6 +42,7 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:hint="@string/prompt_password"
+            android:textCursorDrawable="@drawable/cursor_color"
             android:textSize="15sp"
             android:inputType="textPassword"
             android:layout_centerHorizontal="true"

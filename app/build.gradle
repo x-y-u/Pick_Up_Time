@@ -67,8 +67,10 @@ dependencies {
     //高德地图
     //implementation 'com.amap.api:3dmap:8.0.0'//3D地图
     //implementation 'com.amap.api:map2d:6.0.0'//2D地图
-    implementation 'com.amap.api:navi-3dmap:8.0.0_3dmap8.0.0'//导航
-    implementation 'com.amap.api:search:7.9.0'//搜索
-    implementation 'com.amap.api:location:5.4.0'//定位
+    //implementation 'com.amap.api:navi-3dmap:8.0.0_3dmap8.0.0'//导航
+    //implementation 'com.amap.api:search:7.9.0'//搜索
+    //implementation 'com.amap.api:location:5.4.0'//定位
 
+    //手势
+    //implementation 'com.github.1993hzw:Androids:1.3'
 }

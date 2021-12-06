@@ -27,61 +27,71 @@
             android:layout_centerHorizontal="true"
             android:layout_above="@+id/under_image"
             android:layout_margin="15dp"/>
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/under_image"
             android:layout_width="match_parent"
             android:layout_height="35dp"
+            android:orientation="horizontal"
             android:layout_alignParentBottom="true"
             android:gravity="center_vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
                 android:layout_marginLeft="25dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
                 android:text="生活"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:background="@drawable/text_round_white_bg"/>
             <TextView
-                android:id="@+id/author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="拾光撷影"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:layout_marginRight="25dp"/>
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="创业"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:background="@drawable/text_round_white_bg"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toLeftOf="@+id/author"
-                android:layout_marginRight="15sp"
-                android:paddingBottom="8dp"
-                android:text="by"
-                android:textSize="18sp"
-                android:textColor="@color/white"
-                android:layout_centerVertical="true"/>
-        </RelativeLayout>
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="改革开放"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:background="@drawable/text_round_white_bg"/>
+        </LinearLayout>
     </RelativeLayout>
     <TextView
         android:layout_below="@id/image_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:padding="25dp"
-        android:text="一段介绍。。。"
-        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="25dp"
+        android:text="宗庆后创立的杭州娃哈哈集团从校办厂起家，现已成为中国规模最大、全球饮料产量领先的饮料企业。"
+        android:textSize="18sp"
         android:textColor="@color/white"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/image_control"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="25dp"
         android:text="访问量:2132"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:textColor="@color/white"/>
     <RelativeLayout
         android:id="@+id/image_control"

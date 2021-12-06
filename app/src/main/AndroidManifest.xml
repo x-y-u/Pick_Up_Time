@@ -20,20 +20,37 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_mark"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PushSearchResultActivity"></activity>
-        <activity android:name=".GameFourActivity" />
+        <activity android:name=".games.GameOneActivity"/>
+        <activity android:name=".games.GameFourOnGoingActivity" />
+        <activity android:name=".ChooseImage2Activity" />
+        <activity android:name=".MakeMusicAlbumActivity" />
+        <activity android:name=".MakeAlbumActivity" />
+        <activity android:name=".PersonalInfoActivity" />
+        <activity
+            android:name=".VideoActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GalleryActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".AlbumTemplateActivity" />
+        <activity
+            android:name=".games.GameTwoActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".games.GameFourActivity" />
         <activity android:name=".MemoryClassifyActivity" />
         <activity android:name=".PushSearchActivity" />
-        <activity android:name=".GameThreeActivity" />
-        <activity android:name=".MemorysHtmlActivity" />
+        <activity android:name=".games.GameThreeActivity" />
+        <activity android:name=".HtmlActivity" />
         <activity android:name=".AlbumChooseActivity" />
         <activity android:name=".MainActivities.AlbumActivity" />
         <activity android:name=".MainActivities.RelaxActivity" />
@@ -41,19 +58,7 @@
         <activity android:name=".MainActivities.PostActivity" />
         <activity android:name=".MainActivities.MemoryActivity" />
 
-        <meta-data
-            android:name="com.amap.api.v2.apikey"
-            android:value="4b70443880135d8dd89f09f8e47d61bb" />
-
-        <service android:name="com.amap.api.location.APSService" />
-
-        <activity
-            android:name="com.amap.api.navi.AmapRouteActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
-            android:theme="@android:style/Theme.NoTitleBar" />
-        <activity
-            android:name=".ExhibitionActivity"
-            android:screenOrientation="landscape" />
+        <activity android:name=".ExhibitionActivity" />
         <activity android:name=".PersonalSpaceActivity" />
         <activity android:name=".FamilyActivity" />
         <activity android:name=".Make_NoteActivity" />
@@ -67,16 +72,18 @@
         <activity android:name=".ScoreMallActivity" />
         <activity android:name=".PersonalActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".xytest.TestActivity" />
-        <activity android:name=".WelcomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".xytest.TestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

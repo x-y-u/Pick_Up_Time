@@ -95,14 +95,15 @@ public class ChooseImageActivity extends BaseStatusBarActivity {
                         + MediaStore.Images.Media.MIME_TYPE + "=?",
                 new String[]{"image/jpeg", "image/png"},
                 MediaStore.Images.Media.DATE_MODIFIED);
-        while (mCursor.moveToNext()&&count<200) {
+        while (mCursor.moveToNext()) {
             count++;
             // 获取图片的路径
             String path = mCursor.getString(mCursor
                     .getColumnIndex(MediaStore.Images.Media.DATA));
-            images.add(path);
+            images.add(0,path);
             is_selected.add(false);
         }
+
         adapter = new ChooseImagesAdapter(this,images);
         adapter.setOnClickListener(new ChooseImagesAdapter.OnClickListener() {
             @Override

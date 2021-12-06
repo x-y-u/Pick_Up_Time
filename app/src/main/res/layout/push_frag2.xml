@@ -55,13 +55,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="1.陈望道"
+                            android:text="2.刘英"
                             android:textSize="18sp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="1.陈望道"
+                            android:text="3.裘古怀"
                             android:textSize="18sp"/>
                     </LinearLayout>
                 </RelativeLayout>
@@ -108,19 +108,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1.陈望道"
+                    android:text="1.南湖"
                     android:textSize="18sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="1.陈望道"
+                    android:text="2.陈望道故居"
                     android:textSize="18sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="1.陈望道"
+                    android:text="3.安吉余村"
                     android:textSize="18sp"/>
             </LinearLayout>
             <ImageView
@@ -136,7 +136,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:text="人物榜"
+        android:text="事件榜"
         android:textColor="#987659"
         android:textStyle="bold"
         android:textSize="22sp"/>
@@ -167,18 +167,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="1.陈望道"
+                    android:text="1.南湖红船"
                     android:textSize="18sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1.陈望道"
+                    android:text="2.杭州解放"
                     android:textSize="18sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="1.陈望道"
+                    android:text="3.G20峰会"
                     android:textSize="18sp"/>
             </LinearLayout>
         </RelativeLayout>

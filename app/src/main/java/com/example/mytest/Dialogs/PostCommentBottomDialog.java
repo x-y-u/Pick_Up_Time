@@ -68,8 +68,8 @@ public class PostCommentBottomDialog extends DialogFragment {
             public void onClick(View v) {
                 if (listener!=null){
                     listener.OnConfirm();
-                    CommentBean commentbean = new CommentBean(R.drawable.head_image1,"我",
-                            editText.getText().toString(),"09-14");
+                    CommentBean commentbean = new CommentBean(R.drawable.my_head_image,"我",
+                            editText.getText().toString(),"09-20");
                     adapter.add_comment(commentbean);
                     editText.setText("");
                 }
@@ -82,20 +82,26 @@ public class PostCommentBottomDialog extends DialogFragment {
         commentBeans = new ArrayList<>();
         comments = new ArrayList<>();
         head_images = new ArrayList<>();
-        comments.add("真好看！");
-        comments.add("不错不错，收藏了。");
+        comments.add("追寻先辈印记，铭记历史瞬间！");
+        comments.add("幸福生活来之不易！");
         comments.add("红船精神！");
-        head_images.add(R.drawable.head_image1);
-        head_images.add(R.drawable.head_image2);
-        head_images.add(R.drawable.head_image3);
-        head_images.add(R.drawable.head_image4);
-        head_images.add(R.drawable.head_image5);
-        head_images.add(R.drawable.head_image6);
-        head_images.add(R.drawable.head_image7);
-        head_images.add(R.drawable.head_image8);
-        head_images.add(R.drawable.head_image9);
+        comments.add("真好看");
+//        head_images.add(R.drawable.head_image1);
+//        head_images.add(R.drawable.head_image2);
+//        head_images.add(R.drawable.head_image3);
+//        head_images.add(R.drawable.head_image4);
+//        head_images.add(R.drawable.head_image5);
+//        head_images.add(R.drawable.head_image6);
+//        head_images.add(R.drawable.head_image7);
+//        head_images.add(R.drawable.head_image8);
+//        head_images.add(R.drawable.head_image9);
+        head_images.add(R.drawable.my_head_image1);
+        head_images.add(R.drawable.my_head_image2);
+        List<String> names = new ArrayList<>();
+        names.add("奋斗的弄潮儿");
+        names.add("有志青年");
         for (int i=0;i<num;i++){
-            commentBeans.add(new CommentBean(head_images.get(i%9),i+"",comments.get(i%3),"08-06"));
+            commentBeans.add(new CommentBean(head_images.get(i%2),names.get(i%2),comments.get(i%4),"08-06"));
         }
         LinearLayoutManager manager = new LinearLayoutManager(getContext());
         manager.setOrientation(RecyclerView.VERTICAL);

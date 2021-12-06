@@ -55,17 +55,16 @@
                 android:layout_margin="15dp"
                 android:background="#B5B5B5"/>
             <RelativeLayout
-                android:id="@+id/memory_item_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true">
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="28dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/memory_item_icon"/>
+<!--                <ImageView-->
+<!--                    android:layout_width="22dp"-->
+<!--                    android:layout_height="28dp"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_marginRight="18dp"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@mipmap/memory_item_icon"/>-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/memory_first_card"
                     android:layout_width="80dp"
@@ -96,13 +95,28 @@
                         android:text="杭州一日游"
                         android:textSize="18sp"
                         android:textColor="@color/black"/>
-                    <ImageView
-                        android:id="@+id/memory_item_voice_iv"
-                        android:layout_width="80dp"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="36dp"
-                        android:layout_marginTop="3dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/memory_voice1"/>
+                        android:layout_marginTop="3dp">
+                        <ImageView
+                            android:id="@+id/memory_item_voice_iv"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/memory_voice1"/>
+                        <TextView
+                            android:id="@+id/memory_item_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="5dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:visibility="invisible"
+                            android:textSize="15sp"/>
+                    </RelativeLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -123,6 +137,7 @@
                                 android:layout_height="13dp"
                                 android:src="@mipmap/event_address"/>
                             <TextView
+                                android:id="@+id/memory_item_address"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="嘉兴"
@@ -130,6 +145,7 @@
                                 android:textColor="#484545"/>
                         </LinearLayout>
                         <TextView
+                            android:id="@+id/memory_item_mark"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -140,12 +156,6 @@
                             android:text="红船"
                             android:textSize="16sp"
                             android:background="@drawable/text_round_blue_bg"/>
-                        <ImageView
-                            android:id="@+id/memory_item_people_iv"
-                            android:layout_width="50dp"
-                            android:layout_height="30dp"
-                            android:layout_marginLeft="12dp"
-                            android:src="@mipmap/memory_people1"/>
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>

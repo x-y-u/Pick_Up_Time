@@ -14,13 +14,14 @@ import com.bumptech.glide.Glide;
 import com.example.mytest.R;
 import com.example.mytest.db.MemoryBean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MemoryRecyclerViewAdapter extends RecyclerView.Adapter{
     private Context mcontext;
     private List<MemoryBean> memoryBeans;
     private int[] voices = new int[6];
-    private int[] peoples = new int[3];
+    private List<String> marks ;
 
     public MemoryRecyclerViewAdapter(Context mcontext,List<MemoryBean> memoryBeans){
         this.mcontext = mcontext;
@@ -31,10 +32,19 @@ public class MemoryRecyclerViewAdapter extends RecyclerView.Adapter{
         voices[3] = R.mipmap.memory_voice4;
         voices[4] = R.mipmap.memory_voice5;
         voices[5] = R.mipmap.memory_voice6;
-        peoples[0] = R.mipmap.memory_people1;
-        peoples[1] = R.mipmap.memory_people2;
-        peoples[2] = R.mipmap.memory_people3;
+        marks = new ArrayList<>();
+        marks.add("家庭");
+        marks.add("少年");
+        marks.add("少年");
+        marks.add("社会");
+        marks.add("生活");
+        marks.add("家庭");
+        marks.add("生活");
+        marks.add("生活");
+        marks.add("家庭");
+        marks.add("生活");
     }
+
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -56,8 +66,15 @@ public class MemoryRecyclerViewAdapter extends RecyclerView.Adapter{
             ((MyViewHolder1)holder).tv_day.setText(memoryBean.getDay()+"");
             ((MyViewHolder1)holder).tv_month.setText(memoryBean.getMonth()+"月");
             ((MyViewHolder1)holder).tv_year.setText(memoryBean.getYear()+"");
+            if (memoryBean.getState() != 0){
+                ((MyViewHolder1)holder).iv_voice.setVisibility(View.INVISIBLE);
+                ((MyViewHolder1)holder).tv_content.setVisibility(View.VISIBLE);
+                ((MyViewHolder1)holder).tv_content.setText(memoryBean.getWords());
+                ((MyViewHolder1)holder).tv_mark.setVisibility(View.INVISIBLE);
+                ((MyViewHolder1)holder).tv_address.setText("杭州");
+            }
             ((MyViewHolder1)holder).iv_voice.setImageResource(voices[position%6]);
-            ((MyViewHolder1)holder).iv_people.setImageResource(peoples[position%3]);
+            ((MyViewHolder1)holder).tv_mark.setText(marks.get(position%marks.size()));
         }
     }
 
@@ -76,8 +93,8 @@ public class MemoryRecyclerViewAdapter extends RecyclerView.Adapter{
     }
 
     public class MyViewHolder1 extends RecyclerView.ViewHolder{
-        public ImageView imageView,iv_voice,iv_people;
-        public TextView tv_day,tv_month,tv_title,tv_year;
+        public ImageView imageView,iv_voice;
+        public TextView tv_day,tv_month,tv_title,tv_year,tv_mark,tv_content,tv_address;
         public MyViewHolder1(@NonNull View itemView) {
             super(itemView);
             this.imageView = itemView.findViewById(R.id.memory_first_img);
@@ -86,7 +103,9 @@ public class MemoryRecyclerViewAdapter extends RecyclerView.Adapter{
             this.tv_year = itemView.findViewById(R.id.memory_item_year);
             this.tv_title = itemView.findViewById(R.id.memory_item_title);
             this.iv_voice = itemView.findViewById(R.id.memory_item_voice_iv);
-            this.iv_people = itemView.findViewById(R.id.memory_item_people_iv);
+            this.tv_mark = itemView.findViewById(R.id.memory_item_mark);
+            this.tv_content = itemView.findViewById(R.id.memory_item_content);
+            this.tv_address = itemView.findViewById(R.id.memory_item_address);
         }
     }
 
@@ -103,7 +122,9 @@ public class MemoryRecyclerViewAdapter extends RecyclerView.Adapter{
     }
 
     public void addMemory(MemoryBean memoryBean){
-        this.memoryBeans.add(memoryBean);
+        memoryBean.setState(1);
+        this.memoryBeans.add(0,memoryBean);
+        marks.add(0,"生活");
         notifyDataSetChanged();
     }
 }

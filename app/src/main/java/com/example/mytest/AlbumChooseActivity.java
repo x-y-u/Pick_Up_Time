@@ -7,6 +7,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.mytest.Common.CommonUtils;
@@ -19,12 +20,11 @@ import java.util.List;
 public class AlbumChooseActivity extends AppCompatActivity {
     private List<Fragment> list;
     private ViewPager viewPager;
-    private int[] starts = new int[4];
-    private int[] ends = new int[4];
+    private int[] progresses = new int[4];
+    private ImageView progress;
     private ImageButton back;
     private FragmentsAdapter adapter;
     private List<Integer> images;
-    private TextView tv_start,tv_end;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +49,7 @@ public class AlbumChooseActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                tv_start.setText(starts[position]+"");
-                tv_end.setText(ends[position]+"");
+                //progress.setImageResource(progresses[position]);
             }
 
             @Override
@@ -66,17 +65,13 @@ public class AlbumChooseActivity extends AppCompatActivity {
         images.add(R.drawable.album_choose_2);
         images.add(R.drawable.album_choose_3);
         images.add(R.drawable.album_choose_4);
+        progresses[0] = R.drawable.album_progress_1;
+        progresses[1] = R.drawable.album_progress_2;
+        progresses[2] = R.drawable.album_progress_3;
+        progresses[3] = R.drawable.album_progress_4;
         for (int i=0;i<4;i++){
-            list.add(new AlbumItemFragment(i,images.get(i)));
+            list.add(new AlbumItemFragment(i,images.get(i),progresses[i]));
         }
-        starts[0] = 1921;
-        starts[1] = 1949;
-        starts[2] = 1978;
-        starts[3] = 2003;
-        ends[0] = 1949;
-        ends[1] = 1978;
-        ends[2] = 2003;
-        ends[3] = 2021;
         adapter = new FragmentsAdapter(getSupportFragmentManager(),list);
         viewPager.setOffscreenPageLimit(1);
         viewPager.setAdapter(adapter);
@@ -88,8 +83,7 @@ public class AlbumChooseActivity extends AppCompatActivity {
     private void InitViews() {
         back = findViewById(R.id.album_choose_back);
         viewPager = findViewById(R.id.album_choose_vp);
-        tv_start = findViewById(R.id.album_choose_year_start);
-        tv_end = findViewById(R.id.album_choose_year_end);
+        //progress = findViewById(R.id.album_choose_progress_iv);
     }
 
     public class fadeInFadeOut implements ViewPager.PageTransformer {

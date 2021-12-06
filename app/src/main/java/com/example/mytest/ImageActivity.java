@@ -111,7 +111,6 @@ public class ImageActivity extends AppCompatActivity implements EasyPermissions.
         drawable.setBounds(0, 0, width, height);
         drawable.draw(canvas);
         return bitmap;
-
     }
 
     @Override

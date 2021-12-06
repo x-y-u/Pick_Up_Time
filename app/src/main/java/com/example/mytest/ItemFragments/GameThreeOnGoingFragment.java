@@ -21,15 +21,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GameThreeOnGoingFragment extends Fragment implements View.OnClickListener , View.OnTouchListener {
-    private List<String> titles,options_a,options_b,options_c,options_d,helps,images;
-    private TextView title,help,last,next;
+    private List<String> titles,options_a,options_b,options_c,options_d;
+    private TextView title,last,next;
     private ImageView imageView;
-    private View[] marks_bg = new View[10];
-    private TextView[] marks_tv = new TextView[10];
+//    private View[] marks_bg = new View[10];
+//    private TextView[] marks_tv = new TextView[10];
     private TextView[] options = new TextView[4];
-    private Boolean[] is_answered = new Boolean[10];
-    private int[] real_answers = new int[10];
-    private int[] answers = new int[10];
+    private Boolean[] is_answered = new Boolean[5];
+    private int[] real_answers = new int[5];
+    private int[] answers = new int[5];
+    private List<Integer> images;
     private ImageView[] chooses = new ImageView[4];
     private View view;
     private int curindex,i,score,max_score;
@@ -53,9 +54,6 @@ public class GameThreeOnGoingFragment extends Fragment implements View.OnClickLi
         next.setOnClickListener(this);
         last.setOnTouchListener(this);
         next.setOnTouchListener(this);
-        for (i=0;i<10;i++){
-            marks_bg[i].setOnClickListener(this);
-        }
     }
 
     private void InitDatas() {
@@ -65,18 +63,45 @@ public class GameThreeOnGoingFragment extends Fragment implements View.OnClickLi
         options_b = new ArrayList<>();
         options_c = new ArrayList<>();
         options_d = new ArrayList<>();
-        helps = new ArrayList<>();
         images = new ArrayList<>();
-        for (i=0;i<10;i++){
-            titles.add("图中的人物是谁？"+i);
-            options_a.add("陈望道"+i);
-            options_b.add("陈望道"+i);
-            options_c.add("陈望道"+i);
-            options_d.add("陈望道"+i);
-            helps.add("图中有线索"+i);
+        for (i=0;i<5;i++){
             is_answered[i]=false;
-            real_answers[i] = 0;
         }
+        real_answers[0] = 0;
+        real_answers[1] = 2;
+        real_answers[2] = 2;
+        real_answers[3] = 3;
+        real_answers[4] = 0;
+        titles.add("这是浙江历史上的哪一次著名会议？");
+        images.add(R.drawable.problem1);
+        options_a.add("A. 中共一大");
+        options_b.add("B．中共二大");
+        options_c.add("C．中共三大");
+        options_d.add("D．中共四大");
+        titles.add("这是浙江省哪一地点？");
+        images.add(R.drawable.problem2);
+        options_a.add("A．目莲坞村");
+        options_b.add("B．鲁家村");
+        options_c.add("C．安吉余村");
+        options_d.add("D．大竹园村");
+        titles.add("这与哪位人物有关？");
+        images.add(R.drawable.problem3);
+        options_a.add("A. 粟裕");
+        options_b.add("B. 金贯真");
+        options_c.add("C. 陈望道");
+        options_d.add("D. 裘古怀");
+        titles.add("这与哪位历史人物有关？");
+        images.add(R.drawable.problem4);
+        options_a.add("A. 陈望道");
+        options_b.add("B. 金贯真");
+        options_c.add("C. 步鑫生");
+        options_d.add("D. 裘古怀");
+        titles.add("这与哪位历史人物有关？");
+        images.add(R.drawable.problem5);
+        options_a.add("A. 金贯真");
+        options_b.add("B. 朱枫");
+        options_c.add("C. 李大钊");
+        options_d.add("D. 陈独秀");
     }
 
     private void InitViews() {
@@ -90,29 +115,8 @@ public class GameThreeOnGoingFragment extends Fragment implements View.OnClickLi
         chooses[2] = view.findViewById(R.id.game_three_ongoing_choose_c);
         chooses[3] = view.findViewById(R.id.game_three_ongoing_choose_d);
         title = view.findViewById(R.id.game_three_ongoing_title);
-        help = view.findViewById(R.id.game_three_ongoing_help);
         last = view.findViewById(R.id.game_three_ongoing_last);
         next = view.findViewById(R.id.game_three_ongoing_next);
-        marks_bg[0] = view.findViewById(R.id.progress1_bg);
-        marks_bg[1] = view.findViewById(R.id.progress2_bg);
-        marks_bg[2] = view.findViewById(R.id.progress3_bg);
-        marks_bg[3] = view.findViewById(R.id.progress4_bg);
-        marks_bg[4] = view.findViewById(R.id.progress5_bg);
-        marks_bg[5] = view.findViewById(R.id.progress6_bg);
-        marks_bg[6] = view.findViewById(R.id.progress7_bg);
-        marks_bg[7] = view.findViewById(R.id.progress8_bg);
-        marks_bg[8] = view.findViewById(R.id.progress9_bg);
-        marks_bg[9] = view.findViewById(R.id.progress10_bg);
-        marks_tv[0] = view.findViewById(R.id.progress1_tv);
-        marks_tv[1] = view.findViewById(R.id.progress2_tv);
-        marks_tv[2] = view.findViewById(R.id.progress3_tv);
-        marks_tv[3] = view.findViewById(R.id.progress4_tv);
-        marks_tv[4] = view.findViewById(R.id.progress5_tv);
-        marks_tv[5] = view.findViewById(R.id.progress6_tv);
-        marks_tv[6] = view.findViewById(R.id.progress7_tv);
-        marks_tv[7] = view.findViewById(R.id.progress8_tv);
-        marks_tv[8] = view.findViewById(R.id.progress9_tv);
-        marks_tv[9] = view.findViewById(R.id.progress10_tv);
     }
 
     @Override
@@ -136,7 +140,7 @@ public class GameThreeOnGoingFragment extends Fragment implements View.OnClickLi
                 }
                 break;
             case R.id.game_three_ongoing_next:
-                if (curindex<9){
+                if (curindex<4){
                     select(curindex+1);
                 }else {
                     if (is_all_answered()){
@@ -148,36 +152,6 @@ public class GameThreeOnGoingFragment extends Fragment implements View.OnClickLi
                         Toast.makeText(getContext(),"还有题没做完噢~",Toast.LENGTH_SHORT).show();
                     }
                 }
-                break;
-            case R.id.progress1_bg:
-                select(0);
-                break;
-            case R.id.progress2_bg:
-                select(1);
-                break;
-            case R.id.progress3_bg:
-                select(2);
-                break;
-            case R.id.progress4_bg:
-                select(3);
-                break;
-            case R.id.progress5_bg:
-                select(4);
-                break;
-            case R.id.progress6_bg:
-                select(5);
-                break;
-            case R.id.progress7_bg:
-                select(6);
-                break;
-            case R.id.progress8_bg:
-                select(7);
-                break;
-            case R.id.progress9_bg:
-                select(8);
-                break;
-            case R.id.progress10_bg:
-                select(9);
                 break;
         }
     }
@@ -198,7 +172,7 @@ public class GameThreeOnGoingFragment extends Fragment implements View.OnClickLi
 
     private void select(int index){
         if (curindex!=index){
-            help.setText(helps.get(index));
+            imageView.setImageResource(images.get(index));
             title.setText(titles.get(index));
             options[0].setText(options_a.get(index));
             options[1].setText(options_b.get(index));
@@ -209,28 +183,24 @@ public class GameThreeOnGoingFragment extends Fragment implements View.OnClickLi
             }else {
                 last.setVisibility(View.VISIBLE);
             }
-            if (index == 9){
+            if (index == 4){
                 next.setText("提交");
             }else {
                 next.setText("下一题");
             }
+            curindex = index;
             if (is_answered[index]){
                 set_choose(answers[index]);
             }else {
                 reset_choose();
             }
-            marks_bg[index].setBackground(getResources().getDrawable(R.drawable.circle_brown_selected_bg));
-            marks_bg[curindex].setBackground(getResources().getDrawable(R.drawable.circle_brown_unselected_bg));
-            marks_tv[index].setTextColor(Color.WHITE);
-            marks_tv[curindex].setTextColor(Color.BLACK);
-            curindex = index;
         }
     }
 
     private Boolean is_all_answered(){
-        for (i=0;i<10;i++){
+        for (i=0;i<5;i++){
             if (!is_answered[i]){
-                select(i);
+                //select(i);
                 return false;
             }
         }
@@ -265,11 +235,11 @@ public class GameThreeOnGoingFragment extends Fragment implements View.OnClickLi
     private void calculate(){
         score = 0;
         max_score = 0;
-        for (i=0;i<10;i++){
+        for (i=0;i<5;i++){
             if (answers[i] == real_answers[i]){
-                score+=10;
+                score+=20;
             }
-            max_score+=10;
+            max_score+=20;
         }
     }
 }

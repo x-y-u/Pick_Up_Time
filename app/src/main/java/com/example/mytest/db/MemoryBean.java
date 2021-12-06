@@ -13,6 +13,15 @@ public class MemoryBean implements Serializable {
     //List<Integer> images;
     String imageurl;
     String weekday;//周几
+    int state = 0;
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
 
     public String getUserid() {
         return userid;

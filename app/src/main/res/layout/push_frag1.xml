@@ -32,9 +32,10 @@
                         android:gravity="center_vertical"
                         android:layout_alignParentLeft="true">
                         <ImageView
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:src="@mipmap/fire_red"/>
+                            android:layout_width="26dp"
+                            android:layout_height="22dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/hundred"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -166,9 +167,10 @@
                     android:gravity="center_vertical"
                     android:layout_alignParentLeft="true">
                     <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:src="@mipmap/fire_red"/>
+                        android:layout_width="26dp"
+                        android:layout_height="22dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/hundred"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

@@ -43,6 +43,7 @@ public class LoginActivity extends BaseStatusBarActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+                finish();
             }
         });
         login_bt.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +54,7 @@ public class LoginActivity extends BaseStatusBarActivity {
                 //Log.i("et",phone + ":" + password);
                 if (!phone.isEmpty()&&!password.isEmpty()){
                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                    Toast.makeText(LoginActivity.this,"登陆成功",Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(LoginActivity.this,"账号或密码错误",Toast.LENGTH_SHORT).show();
                 }

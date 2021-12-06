@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFF6E5">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -22,12 +23,12 @@
         android:layout_height="wrap_content"
         android:text="家庭成员"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="30dp"/>
+        android:textSize="24sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="27dp"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/family_members_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="18dp"/>
 </LinearLayout>

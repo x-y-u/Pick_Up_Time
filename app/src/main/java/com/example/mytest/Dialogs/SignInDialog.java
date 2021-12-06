@@ -76,10 +76,10 @@ public class SignInDialog extends DialogFragment {
         if(dialog != null){
             Window window = dialog.getWindow();
             WindowManager.LayoutParams lp = getDialog().getWindow().getAttributes();
-            lp.width = CommonUtils.getWindowWidth(getContext())/8*7;
-            lp.height = CommonUtils.getWindowHeight(getContext())/6*5;
+            //lp.width = CommonUtils.getWindowWidth(getContext())/8*7;
+            //lp.height = CommonUtils.getWindowHeight(getContext())/6*5;
             if(window != null){
-                window.setLayout(lp.width, lp.height);
+                window.setLayout(CommonUtils.dip2px(getContext(),320), CommonUtils.dip2px(getContext(),600));
             }
         }
     }

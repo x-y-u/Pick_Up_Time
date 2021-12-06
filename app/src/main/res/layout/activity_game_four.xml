@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="老照片上色"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textColor="#333333"/>
     </RelativeLayout>
     <RelativeLayout
@@ -65,7 +65,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
         android:text="功能"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textColor="#333333"/>
     <TextView
         android:id="@+id/game4_content"
@@ -78,6 +78,7 @@
         android:textColor="#404040"
         android:textSize="16sp"/>
     <androidx.cardview.widget.CardView
+        android:id="@+id/game4_start_card"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"

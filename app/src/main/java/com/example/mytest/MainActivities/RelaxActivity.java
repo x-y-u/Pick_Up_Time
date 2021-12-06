@@ -11,8 +11,10 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.mytest.Common.BaseStatusBarActivity;
-import com.example.mytest.GameFourActivity;
-import com.example.mytest.GameThreeActivity;
+import com.example.mytest.games.GameFourActivity;
+import com.example.mytest.games.GameOneActivity;
+import com.example.mytest.games.GameThreeActivity;
+import com.example.mytest.games.GameTwoActivity;
 import com.example.mytest.R;
 import com.example.mytest.xytest.TestActivity;
 
@@ -54,9 +56,10 @@ public class RelaxActivity extends BaseStatusBarActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.card_game1:
-                startActivity(new Intent(RelaxActivity.this,TestActivity.class));
+                startActivity(new Intent(RelaxActivity.this, GameOneActivity.class));
                 break;
             case R.id.card_game2:
+                startActivity(new Intent(RelaxActivity.this, GameTwoActivity.class));
                 break;
             case R.id.card_game3:
                 startActivity(new Intent(RelaxActivity.this, GameThreeActivity.class));

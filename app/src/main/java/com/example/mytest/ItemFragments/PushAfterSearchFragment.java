@@ -1,9 +1,11 @@
 package com.example.mytest.ItemFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.example.mytest.AlbumTemplateActivity;
+import com.example.mytest.MakeAlbumActivity;
+import com.example.mytest.MakeMusicAlbumActivity;
 import com.example.mytest.MyAdapter.PushImageRecyclerViewAdapter4;
 import com.example.mytest.R;
 
@@ -25,6 +30,7 @@ public class PushAfterSearchFragment extends Fragment {
     private List<Integer> images;
     private Boolean state;
     private RelativeLayout bottom;
+    private ImageView[] imageViews = new ImageView[3];
 
     @Nullable
     @Override
@@ -37,11 +43,36 @@ public class PushAfterSearchFragment extends Fragment {
     }
 
     private void InitEvents() {
+        imageViews[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+        imageViews[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MakeMusicAlbumActivity.class);
+                intent.putExtra("state",1);
+                startActivity(intent);
+            }
+        });
+        imageViews[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MakeAlbumActivity.class);
+                intent.putExtra("state",1);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void InitViews() {
         recyclerView = view.findViewById(R.id.push_after_search_rv);
         bottom = view.findViewById(R.id.push_after_search_bottom);
+        imageViews[0] = view.findViewById(R.id.push_after_search_iv1);
+        imageViews[1] = view.findViewById(R.id.push_after_search_iv2);
+        imageViews[2] = view.findViewById(R.id.push_after_search_iv3);
     }
 
     private void InitDatas() {
@@ -73,5 +104,10 @@ public class PushAfterSearchFragment extends Fragment {
                 }
             }
         });
+    }
+
+    public void setState(Boolean state){
+        this.state = false;
+        adapter.setState(state);
     }
 }

@@ -63,7 +63,7 @@
                 android:paddingRight="15dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:text="杭州"
+                android:text="百年"
                 android:textColor="#987659"
                 android:textSize="16sp"
                 android:background="@drawable/text_round_yellow_brown_bg"/>
@@ -81,7 +81,7 @@
                 android:paddingRight="15dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:text="嘉兴红船"
+                android:text="南湖革命纪念馆"
                 android:textColor="#987659"
                 android:textSize="16sp"
                 android:background="@drawable/text_round_yellow_brown_bg"/>
@@ -93,7 +93,7 @@
                 android:paddingRight="15dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:text="手绘"
+                android:text="八八战略"
                 android:textColor="#987659"
                 android:textSize="16sp"
                 android:background="@drawable/text_round_yellow_brown_bg"/>
@@ -104,7 +104,7 @@
                 android:paddingRight="15dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:text="义乌"
+                android:text="杭州"
                 android:textColor="#987659"
                 android:textSize="16sp"
                 android:background="@drawable/text_round_yellow_brown_bg"/>
@@ -141,7 +141,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="国庆节"
+                        android:text="建党百年"
                         android:textSize="18sp"
                         android:textColor="@color/black"/>
                     <ImageView
@@ -166,7 +166,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="国庆节"
+                        android:text="杭州"
                         android:textSize="18sp"
                         android:textColor="@color/black"/>
                     <ImageView
@@ -190,7 +190,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="国庆节"
+                        android:text="浙江党史馆"
                         android:textSize="18sp"
                         android:textColor="@color/black"/>
                 </LinearLayout>
@@ -215,7 +215,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="国庆节"
+                        android:text="南湖革命纪念馆"
                         android:textSize="18sp"
                         android:textColor="@color/black"/>
                     <ImageView
@@ -239,7 +239,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="国庆节"
+                        android:text="陈望道"
                         android:textSize="18sp"
                         android:textColor="@color/black"/>
                 </LinearLayout>
@@ -259,7 +259,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="国庆节"
+                        android:text="5G"
                         android:textSize="18sp"
                         android:textColor="@color/black"/>
                 </LinearLayout>

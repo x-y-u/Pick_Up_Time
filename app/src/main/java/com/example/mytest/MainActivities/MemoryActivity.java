@@ -2,6 +2,8 @@ package com.example.mytest.MainActivities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.hardware.Camera;
 import android.os.Bundle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,14 +16,17 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.mytest.ChooseImageActivity;
 import com.example.mytest.Common.BaseStatusBarActivity;
 import com.example.mytest.Common.CircleImageView;
 import com.example.mytest.Common.CommonUtils;
 import com.example.mytest.Common.HttpUtils;
+import com.example.mytest.Dialogs.LoadingDialog;
 import com.example.mytest.FamilyActivity;
+import com.example.mytest.MakeAlbumActivity;
+import com.example.mytest.MakeMusicAlbumActivity;
 import com.example.mytest.MemoryClassifyActivity;
 import com.example.mytest.MemoryUploadActivity;
-import com.example.mytest.MemorysHtmlActivity;
 import com.example.mytest.MyAdapter.MemoryRecyclerViewAdapter;
 import com.example.mytest.R;
 import com.example.mytest.db.MemoryBean;
@@ -72,7 +77,13 @@ public class MemoryActivity extends BaseStatusBarActivity {
         imageViews[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MemoryActivity.this, MemorysHtmlActivity.class));
+                startActivity(new Intent(MemoryActivity.this, MakeAlbumActivity.class));
+            }
+        });
+        imageViews[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MemoryActivity.this, MakeMusicAlbumActivity.class));
             }
         });
         imageViews[2].setOnClickListener(new View.OnClickListener() {
@@ -115,7 +126,9 @@ public class MemoryActivity extends BaseStatusBarActivity {
             String title = data.getStringExtra("title");
             String content = data.getStringExtra("content");
             List<String> images = data.getExtras().getStringArrayList("images");
+            adapter.addMemory(new MemoryBean(userid,year,month,day,title,content,images.get(0),"周日"));
             Log.i("back",year+" "+month+" "+day+" "+title+" "+content+" "+images.size());
+        }else if(resultCode == 1){
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
     <ImageView
         android:layout_width="220dp"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
         android:src="@drawable/game_three_title"/>
@@ -15,11 +15,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="400dp"
         android:background="@drawable/game_three_bt_bg"
-        android:paddingLeft="80dp"
-        android:paddingRight="80dp"
-        android:paddingTop="8.5dp"
-        android:paddingBottom="8.5dp"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:text="开始游戏"
-        android:textSize="27sp"
+        android:textSize="25sp"
         android:textColor="#484545"/>
 </RelativeLayout>
