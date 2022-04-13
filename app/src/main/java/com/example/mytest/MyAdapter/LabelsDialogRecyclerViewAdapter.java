@@ -1,5 +1,6 @@
 package com.example.mytest.MyAdapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,7 +41,7 @@ public class LabelsDialogRecyclerViewAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         ((MyViewHolder)holder).textView.setText(labels.get(position));
         ((MyViewHolder)holder).textView.setOnClickListener(new View.OnClickListener() {
             @Override
